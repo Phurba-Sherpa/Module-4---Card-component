@@ -1,4 +1,6 @@
-
+/* =================
+BASIC SETUP
+==================== */
 :root {
     --color-primary: #05CBE9;
     --color-secondary: #111D4A;
@@ -8,13 +10,157 @@
     --color-white: #FFFFFF;
 }
 
-*,
-*::after,
-*::before {
+/* =================
+RESET STYLES
+==================== */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
     font-size: 62.5%;
+}
+
+/* =================
+GENERAL STYLES
+==================== */
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Blinker', sans-serif;
+    font-size: 1.6rem;
+    color: var(--color-grey-400);
+   
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.btn {
+    font-weight: 700;
+    display: inline-block;
+    font-size: 2rem;
+    padding: .35em 1em;
+    border: 0;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn:hover{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    transform: translateY(-2px);
+}
+
+
+
+.btn--primary {
+    background-color: var(--color-primary);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* =================
+CARD IMAGE
+==================== */
+
+.card-img {
+    flex-basis: 200px;
+    min-height: 0;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+    background: yellow;
+}
+
+/* =================
+CARD CONTAINER
+==================== */
+
+.card-content {
+    padding: 1.5em;
+    background-color: var(--color-secondary);
+}
+
+.card-title {
+    color: var(--color-primary);
+    margin-bottom: .714em;
+}
+
+.card-desc {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    opacity: .51;
+    color: var(--color-white);
+    line-height: 1.5;
+}
+
+.card-footer {
+    margin-top: 2em;
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card-footer__text {
+    opacity: .6;
+}
+
+.card-timer {
+    font-weight: 700;
+    font-size: 1.47em;
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+    .card {
+        flex-direction: row;
+        margin: auto;
+        /* justify-content: center; */
+
+    }
+
+    .card-img {
+        flex-shrink: 0;
+        /* height: 300px; */
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .card-footer {
+        margin-top: 3em;
+    }
+
+    
 }
