@@ -1,0 +1,20 @@
+
+:root {
+    --color-primary: #05CBE9;
+    --color-secondary: #111D4A;
+    --color-balck: #232323;
+    --color-grey-400: #686868;
+    --color-grey-300: #00000029;
+    --color-white: #FFFFFF;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
